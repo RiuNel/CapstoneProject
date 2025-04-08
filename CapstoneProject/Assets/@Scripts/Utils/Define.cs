@@ -5,5 +5,20 @@ using UnityEngine;
 /// </summary>
 public static class Define
 {
-    
+    //씬의 타입
+    public enum EScene
+    {
+        UnKnown,
+        TitleScene,
+        GameScene,
+    }
+
+    //UI 이벤트 타입
+    public enum EUIEvent
+    {
+        Click,//클릭
+        PointerDown,//마우스 누르는순간
+        PointerUp,//마우스 때는 순간
+        Drag,//누르면서 드래그
+    }
 }
