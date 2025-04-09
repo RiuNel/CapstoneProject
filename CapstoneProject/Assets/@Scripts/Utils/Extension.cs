@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 using System.Collections.Generic;
+using UnityEngine.EventSystems;
 
 public static class Extension
 {
@@ -11,6 +12,17 @@ public static class Extension
     public static T GetOrAddComponent<T>(this GameObject go) where T : UnityEngine.Component
     {
         return Util.GetOrAddComponent<T>(go);
+    }
+
+    /// <summary>
+    /// UI의 이벤트를 받아 함수를 실행시켜줌
+    /// </summary>
+    /// <param name="go"></param>
+    /// <param name="action">실행시킬 함수</param>
+    /// <param name="type">무슨 타입의 이벤트인지</param>
+    public static void BindEvent(this GameObject go, Action<PointerEventData> action = null, Define.EUIEvent type = Define.EUIEvent.Click)
+    {
+        UI_Base.BindEvent(go, action, type);
     }
 
     /// <summary>
