@@ -21,4 +21,13 @@ public static class Define
         PointerUp,//마우스 때는 순간
         Drag,//누르면서 드래그
     }
+
+    //Sound 타입
+    public enum ESound 
+    {
+        Bgm,
+        Effect,
+        Max,
+    }
+
 }
