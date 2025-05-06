@@ -30,4 +30,10 @@ public static class Define
         Max,
     }
 
+    //Object들의 타입
+    public enum EObjectType
+    {
+        None,
+        Creature,
+    }
 }
