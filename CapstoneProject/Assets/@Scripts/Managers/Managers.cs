@@ -12,6 +12,14 @@ public class Managers : MonoBehaviour
     private static Managers _instance;//½Ì±ÛÅæ ÀÎ½ºÅÏ½º
     public static Managers Instance { get { Init(); return _instance; } }
 
+    #region Content Manager
+    private GameManager _game = new GameManager();
+    private ObjectManager _object = new ObjectManager();
+
+    public static GameManager Game { get { return Instance?._game; } }
+    public static ObjectManager Object { get { return Instance?._object; } }
+    #endregion
+
     #region Core Manager
     private ResourceManager _resource = new ResourceManager();
     private DataManager _data = new DataManager();
