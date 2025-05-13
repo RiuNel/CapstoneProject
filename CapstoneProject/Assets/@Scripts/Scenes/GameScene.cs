@@ -1,3 +1,4 @@
+using StarterAssets;
 using UnityEngine;
 
 public class GameScene : BaseScene
@@ -15,5 +16,10 @@ public class GameScene : BaseScene
     public override void Clear()
     {
         //TODO - Scene이 바뀔 경우 오브젝트들을 밀어주는 작업추가
+    }
+
+    public void Start()
+    {
+        Managers.Object.Spawn<ThirdPersonController>(new Vector3(0, 0.7f, 0), 0);
     }
 }

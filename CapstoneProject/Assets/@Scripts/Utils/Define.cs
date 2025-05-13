@@ -11,6 +11,7 @@ public static class Define
         UnKnown,
         TitleScene,
         GameScene,
+        DevScene,
     }
 
     //UI 이벤트 타입
